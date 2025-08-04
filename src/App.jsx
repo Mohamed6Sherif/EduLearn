@@ -24,7 +24,7 @@ function Navbar() {
       <div className="text-xl font-bold">
         <Link to="/">EduLearn</Link>
       </div>
-      <ul className="flex gap-6 text-sm font-medium text-gray-700">
+      <ul className="flex gap-2 text-sm font-medium text-gray-700">
         <li>
           <Link to="/" className="hover:text-blue-600">
             Home
@@ -37,7 +37,7 @@ function Navbar() {
         </li>
         <li>
           <Link to="/book" className="hover:text-blue-600">
-            Book Course
+            Book
           </Link>
         </li>
       </ul>
