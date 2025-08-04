@@ -1,32 +1,42 @@
+import { useLang } from "./context/LangContext";
+
 export default function HomePage() {
+  const { lang } = useLang();
   return (
     <div className="min-h-screen bg-gray-50 p-10 flex flex-col items-center text-center">
-      <h1 className="text-3xl font-bold text-gray-800 mb-4">
-        Welcome to EduLearn 📚
+      <h1
+        className="text-3xl font-bold text-gray-800 mb-4"
+        dir={lang === "ar" ? "rtl" : "ltr"}
+      >
+        {lang === "en" ? "Welcome to EduLearn 📚" : " مرحبًا بكم 📚"}
       </h1>
 
-      <p className="text-lg text-gray-700 max-w-2xl mb-6">
-        At EduLearn, we’ve been empowering students for over{" "}
-        <strong>5 years</strong> with high-quality courses in{" "}
-        <strong>Computer Fundamentals</strong> and <strong>Programming</strong>{" "}
-        for both <strong>kids</strong> and <strong>adults</strong>. Whether
-        you're just starting or looking to sharpen your skills — we've got you
-        covered!
+      <p
+        className="text-lg text-gray-700 max-w-2xl mb-6"
+        dir={lang === "ar" ? "rtl" : "ltr"}
+      >
+        {lang === "en"
+          ? "At EduLearn, we’ve been empowering students for over 5 years with high-quality courses in Computer Fundamentals and Programming for both kids and adults. Whether you're just starting or looking to sharpen your skills — we've got you covered!"
+          : "نحن نعمل على تمكين الطلاب منذ أكثر من 5 سنوات من خلال دورات عالية الجودة في أساسيات الكمبيوتر والبرمجة للأطفال والكبار. سواء كنت مبتدئًا أو تبحث عن تحسين مهاراتك - نحن هنا لمساعدتك!"}
       </p>
 
-      <p className="text-lg text-gray-700 mb-6">
-        Our goal is to make tech education simple, fun, and accessible to
-        everyone. 🚀
+      <p
+        className="text-lg text-gray-700 mb-6"
+        dir={lang === "ar" ? "rtl" : "ltr"}
+      >
+        {lang === "en"
+          ? "Our courses are designed to be engaging, practical, and accessible for everyone. From basic computer skills to advanced programming languages, we make learning fun and effective. 🚀"
+          : "🚀 هدفنا هو جعل التعليم التكنولوجي بسيطًا وممتعًا وفي متناول الجميع"}
       </p>
 
-      <div className="flex gap-4 mb-10">
+      <div className="flex gap-4 mb-10" dir={lang === "ar" ? "rtl" : "ltr"}>
         <a
           href="https://wa.me/201212140220"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition"
         >
-          Chat with us on WhatsApp
+          {lang === "en" ? "Chat with us on WhatsApp" : "تحدث معنا على واتساب"}
         </a>
 
         <a
@@ -35,7 +45,9 @@ export default function HomePage() {
           rel="noopener noreferrer"
           className="bg-red-600 text-white px-5 py-2 rounded hover:bg-red-700 transition"
         >
-          Visit our YouTube Channel
+          {lang === "en"
+            ? "Visit our YouTube Channel"
+            : "زيارة قناتنا على يوتيوب"}
         </a>
       </div>
 
@@ -50,11 +62,17 @@ export default function HomePage() {
           />
 
           {/* معلوماتك */}
-          <div>
+          <div dir={lang === "ar" ? "rtl" : "ltr"}>
             <p className="mb-1 font-medium">
-              Mohamed Sherif — Instructor & Founder
+              {lang === "en"
+                ? "Mohamed Sherif — Instructor & Founder"
+                : "محمد شريف — المدرب والمؤسس"}
             </p>
-            <p className="mb-1">Experience: 5+ years in Tech Education</p>
+            <p className="mb-1">
+              {lang === "en"
+                ? "Expert in Computer Fundamentals & Programming"
+                : "خبير في أساسيات الكمبيوتر والبرمجة"}
+            </p>
             <p className="mb-1">
               Phone:{" "}
               <a
