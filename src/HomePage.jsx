@@ -44,7 +44,7 @@ export default function HomePage() {
         <div className="flex items-center justify-center gap-4 flex-col sm:flex-row text-center sm:text-left">
           {/* صورتك */}
           <img
-            src="../src/assets/me.jpg"
+            src="/me.jpg"
             alt="Mohamed Sherif"
             className="w-20 h-20 rounded-full border-2 border-gray-300"
           />
