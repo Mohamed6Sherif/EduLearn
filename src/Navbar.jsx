@@ -3,7 +3,7 @@ import { useLang } from "./context/LangContext";
 
 export default function Navbar() {
   const { lang, setLang } = useLang();
-  const location = useLocation(); // لمعرفة الصفحة الحالية
+  const location = useLocation();
 
   const isActive = (path) =>
     location.pathname === path
@@ -11,7 +11,7 @@ export default function Navbar() {
       : "hover:text-blue-600 px-2 py-1";
 
   return (
-    <nav className="flex justify-between items-center px-6 py-4 shadow bg-white">
+    <nav className="flex justify-between items-center px-6 py-3 shadow bg-white border-b border-gray-200">
       <div className="text-xl font-bold">
         <Link to="/">
           <div className="w-9 h-9 rounded-full overflow-hidden border">
@@ -42,7 +42,7 @@ export default function Navbar() {
       </ul>
       <button
         onClick={() => setLang(lang === "en" ? "ar" : "en")}
-        className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+        className="px-3 py-1 bg-green-200 text-black rounded hover:bg-green-500 transition"
       >
         {lang === "en" ? "Ar 🌐" : "En 🌐"}
       </button>
